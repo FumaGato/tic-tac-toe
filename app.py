@@ -122,14 +122,14 @@ def tic_tac_toe(player1, player2):
         print_grid()
         start_turn(player1)
         clear_terminal()
-        if chek_win(player1) == 1:
+        if check_win(player1) == 1:
             break
         if check_draw() == True:
             break
         print_grid()
         start_turn(player2)
         clear_terminal()
-        if chek_win(player2) == 1:
+        if check_win(player2) == 1:
             break
         if check_draw() == True:
             break
@@ -160,7 +160,7 @@ def start_turn(player):
                     done = True
 
 
-def chek_win(player):
+def check_win(player):
     for con in win_cons:
         if con.check_win() == True:
             player.win = True
